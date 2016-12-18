@@ -1,30 +1,20 @@
-
 <template>  
   <div>
-    <input v-model="name">
-    <hello-component v-bind:name="name"></hello-component>
+    App components
+    <br>
+    <router-link to="/">Home</router-link>
+    <br>
+    <router-link to="/about">About</router-link>
+    <br>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloComponent from './components/Hello'
-
 export default {
-  components: {
-    HelloComponent
-  },
-  data () {
-    return {
-      name: '',
-      list: [
-        1, 2, 3, 4
-      ]
-    }
-  },
-  methods: {
-    sayHello () {
-      window.alert('Hi, ' + this.name)
-    }
-  }
+
 }
 </script>
+<style>
+  @import '../node_modules/semantic-ui-css/semantic.min.css';
+</style>

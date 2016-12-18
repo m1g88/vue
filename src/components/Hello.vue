@@ -11,18 +11,7 @@ export default {
       required: true
     }
   },
-  beforeCreate () {
-
-  },
-  created () {
-
-  },
   mounted () {
-  },
-  beforeUpdate () {
-
-  },
-  beforeDestroy () {
   }
 }
 </script>
