@@ -1,28 +1,30 @@
-<template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+
+<template>  
+  <div>
+    <input v-model="name">
+    <hello-component v-bind:name="name"></hello-component>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+import HelloComponent from './components/Hello'
 
 export default {
-  name: 'app',
   components: {
-    Hello
+    HelloComponent
+  },
+  data () {
+    return {
+      name: '',
+      list: [
+        1, 2, 3, 4
+      ]
+    }
+  },
+  methods: {
+    sayHello () {
+      window.alert('Hi, ' + this.name)
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
